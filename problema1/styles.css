@@ -1,0 +1,63 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #ecc6ff;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    color: #32273d;
+}
+
+/* Estilos del formulario */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(175, 26, 255, 0.1);
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Selects */
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* Botón de generar gráfico */
+button {
+    background-color: #c74eff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #8c00b3;
+}
+
+/* Contenedor del gráfico */
+canvas {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
