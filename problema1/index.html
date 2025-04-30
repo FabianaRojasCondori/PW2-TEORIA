@@ -74,6 +74,14 @@
             <option value="hospitaluci">UCI</option>
             <option value="nohospital">No Hospitalizados</option>
         </select>
+        <label for="chartType">Tipo de gráfico:</label>
+        <select id="chartType">
+            <option value="bar">Barras</option>
+            <option value="line">Líneas</option>
+            <option value="radar">Radar</option>
+            <option value="doughnut">Circulares y de anillo</option>
+            <option value="polarArea">Areas polares</option>
+        </select>
 
         <button type="button" id="generateChart">Generar Gráfico</button>
     </form>
@@ -110,6 +118,7 @@
         const region1Name = region1Select.value;
         const region2Name = region2Select.value;
         const category = categorySelect.value;
+        const chartType = document.getElementById('chartType').value;
         if (region1Name === region2Name) {
             alert('Por favor selecciona dos regiones diferentes para comparar.');
             return;
@@ -141,7 +150,7 @@
         }
 
         myChart = new Chart(ctx, {
-            type: 'bar',
+            type: chartType,
             data: {
                 labels: labels,
                 datasets: [
