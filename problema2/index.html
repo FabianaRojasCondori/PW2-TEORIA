@@ -24,6 +24,7 @@
     .then(json => {
         data = json.filter(region => region.region !== "Lima" && region.region !== "Callao");
         console.log('Datos filtrados:', data);
+        generateChart();
     })
 
     .catch(error => {
