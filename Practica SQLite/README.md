@@ -47,4 +47,4 @@
 ## Errores encontrados
 - Se intento realizar una pagina interactiva donde el usuario pudiera seleccionar el tipo de dato que desea ver y mostrarlo en una lista, pero no se consiguio manejar correctamente la base de datos.
 
-# Se logro la lectura de la base de datos mas no se pudo manejar los datos , el programa imprime la tabla de "Movie" para comprobar la conexion con la base de datos. 
+## Se logro la lectura de la base de datos mas no se pudo manejar los datos , el programa imprime la tabla de "Movie" para comprobar la conexion con la base de datos. 
