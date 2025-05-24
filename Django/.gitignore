@@ -1,0 +1,35 @@
+# 🔹 Archivos generados por Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# 🔹 Entornos Virtuales
+tareaDjango/
+venv/
+
+# 🔹 Configuración local y claves sensibles
+.env
+.settings_local.py
+
+# 🔹 Archivos de base de datos SQLite
+db.sqlite3
+*.sqlite3
+
+# 🔹 Archivos de logs y caché
+logs/
+*.log
+debug.log
+
+# 🔹 Archivos de migraciones temporales
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/__pycache__/
+
+# 🔹 Archivos estáticos y compilados
+staticfiles/
+media/
+node_modules/
+
+# 🔹 Archivos específicos de VS Code
+.vscode/
