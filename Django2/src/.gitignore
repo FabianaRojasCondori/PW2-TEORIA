@@ -1,0 +1,25 @@
+# Entorno virtual de Python
+../env/
+
+# Archivos de base de datos de Django
+/db.sqlite3
+
+# Archivos de caché y bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de migraciones compilados
+migrations/__pycache__/
+
+# Archivos de configuración locales y variables de entorno
+.env
+
+# Archivos de configuración de VSCode
+.vscode/
+
+# Otros archivos temporales
+*.log
+.DS_Store
+Thumbs.db
