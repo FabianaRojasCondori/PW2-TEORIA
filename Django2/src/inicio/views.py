@@ -17,7 +17,6 @@ def anotherView(request):
 def personaTestView(request):
     obj = Persona.objects.get(id=1)  
     context = {
-        'nombre': obj.nombres,
-        'edad': obj.edad,
+        'object': obj,
     }
     return render(request, 'personas/test.html', context)
