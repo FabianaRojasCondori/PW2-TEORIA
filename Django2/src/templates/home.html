@@ -13,11 +13,45 @@
             {{myText}},
             {{myNumber}},
         </p>
-        <ul>
-            {% for myItem in myList %}
-                <li>{{forloop.counter}} - {{myItem}}</li>
-            {% endfor %}
-        </ul>
+        <div>
+            <p>Usando 'forloop.counter':</p>
+            <ul>
+                {% for myItem in myList %}
+                    <li>{{ forloop.counter }} - {{ myItem }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <p>Usando 'forloop.revcounter':</p>
+            <ul>
+                {% for myItem in myList %}
+                    <li>{{ forloop.revcounter }} - {{ myItem }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <p>Primer elemento ('forloop.first'):</p>
+            <ul>
+                {% for myItem in myList %}
+                    {% if forloop.first %}
+                        <li>{{ myItem }} (Primer elemento)</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <p>Último elemento ('forloop.last'):</p>
+            <ul>
+                {% for myItem in myList %}
+                    {% if forloop.last %}
+                        <li>{{ myItem }} (Último elemento)</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
         {% endblock %}
     </body>
 </html>
