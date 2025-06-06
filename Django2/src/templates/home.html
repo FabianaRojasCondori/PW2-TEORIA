@@ -13,6 +13,11 @@
             {{myText}},
             {{myNumber}},
         </p>
+        <ul>
+            {% for item in myList %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
         {% endblock %}
     </body>
 </html>
