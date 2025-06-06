@@ -2,9 +2,9 @@
 {% block content %}
     <h2>Modelo Persona</h2>
     <ul>
-        <li><strong>nombres</strong>: CharField, máximo 100 caracteres. Almacena los nombres de la persona.</li>
-        <li><strong>apellidos</strong>: CharField, máximo 100 caracteres. Almacena los apellidos de la persona.</li>
-        <li><strong>edad</strong>: IntegerField. Almacena la edad de la persona.</li>
-        <li><strong>donador</strong>: CharField, máximo 100 caracteres, opcional. Indica si la persona es donadora.</li>
+        <li><strong>nombres</strong>: {{ persona.nombres|default:'-' }}</li>
+        <li><strong>apellidos</strong>: {{ persona.apellidos|default:'-' }}</li>
+        <li><strong>edad</strong>: {{ persona.edad|default:'-' }}</li>
+        <li><strong>donador</strong>: {{ persona.donador|default:'-' }}</li>
     </ul>
 {% endblock %}
