@@ -10,9 +10,26 @@
         <h1>Hola mundo desde Django</h1>
         <h3>Con templates</h3>
         <p>
-            {{myText}},
-            {{myNumber}},
+            {{myText|upper}},
+            {{myNumber}}, <br><br>
+            Probando los filtros: Diapositiva 7 <br>
+            <li>'add'    ---   {{myText|add:" - Este es un texto adicional"}},</li>
+            <li>'length' ---   {{myText|length}},</li>
+            <li>'slice'  ---   {{myText|slice:":8"}},</li>
+            <li>'lower'  ---   {{myText|lower}},</li>
+            <li>'title'  ---   {{myText|title}},</li>
         </p>
+        <ul>
+            {% for myItem in myList %}
+                <li>{{forloop.counter}} - {{myItem}}
+                {% if myItem == 33 %}
+                    - Este número es mágico
+                {% elif myItem > 50 %}
+                    - Este número es mayor que 50
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
         {% endblock %}
     </body>
 </html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Modelo Persona</h2>
+    <ul>
+        <li><strong>nombres</strong>: {{ persona.nombres|default:'-' }}</li>
+        <li><strong>apellidos</strong>: {{ persona.apellidos|default:'-' }}</li>
+        <li><strong>edad</strong>: {{ persona.edad|default:'-' }}</li>
+        <li><strong>donador</strong>: {{ persona.donador|default:'-' }}</li>
+    </ul>
+{% endblock %}
