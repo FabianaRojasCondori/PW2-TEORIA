@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+<body>
+    <img src="{% static 'personas/logo-unsa.png' %}" alt="logo unsa">
+    {% block body %}{% endblock %}
+</body>
+</html>

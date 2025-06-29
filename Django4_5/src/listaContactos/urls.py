@@ -30,5 +30,5 @@ urlpatterns = [
     path('search', searchForHelp, name='buscar'),
     path('anotherAdd', personaAnotherCreateView, name='OtroAgregarPersonas'),
     path('personas/<int:myID>/', personasShowObject, name = 'browsing'),
-    path('personas/', include('personas.urls') ),
+    path('personas/', include(('personas.urls', 'personas'), namespace='personas')),  
 ]
