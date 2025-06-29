@@ -3,12 +3,17 @@ from django.shortcuts import get_object_or_404
 from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
 from django.views.generic import ListView
+from django.views.generic import DetailView
 
 # Create your views here.
 
 class PersonaListView(ListView):
     model = Persona
     queryset = Persona.objects.filter(edad__lte='20')
+
+class PersonaDetailView(DetailView):
+    model = Persona
+    template_name = "personas/detalle.html"
 
 def personaAnotherCreateView(request):
     form = RawPersonaForm() #request.GET
