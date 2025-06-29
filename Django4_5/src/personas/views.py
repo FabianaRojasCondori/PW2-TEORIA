@@ -4,7 +4,8 @@ from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -68,3 +69,7 @@ class PersonaCreateView(CreateView):
         'edad',
         'donador'
     ]
+
+class PersonaDeleteView(DeleteView):
+    model = Persona 
+    success_url = reverse_lazy('personas:persona-list')
