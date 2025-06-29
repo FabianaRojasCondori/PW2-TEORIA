@@ -1,7 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-<form action='.' method='POST'> {% csrf_token %} 
-	<input type='text' name='q' placeholder='buscar'/>
-	<input type='submit' value='Buscar'/>
+<form method='POST'> {% csrf_token %}
+		{% csrf_token %}
+
+  <p>
+    <label for="{{ form.nombres.id_for_label }}">Nombres:</label>
+    {{ form.nombres }}
+  </p>
+
+  <p>
+    <label for="{{ form.apellidos.id_for_label }}">Apellidos:</label>
+    {{ form.apellidos }}
+  </p>
+
+  <p>
+    <label for="{{ form.edad.id_for_label }}">Edad:</label>
+    {{ form.edad }}
+  </p>
+
+  <p>
+    <label for="{{ form.donador.id_for_label }}">Donador:</label>
+    {{ form.donador }}
+  </p>
+
+  <input type="submit" value="Grabar">
 </form>
 {% endblock %}
