@@ -19,6 +19,7 @@ from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
 from personas.views import personaTestView, personaCreateView, searchForHelp, personaAnotherCreateView
+from personas.views import personasShowObject
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +29,5 @@ urlpatterns = [
     path('agregar/', personaCreateView, name='createPersona'),
     path('search', searchForHelp, name='buscar'),
     path('anotherAdd', personaAnotherCreateView, name='OtroAgregarPersonas'),
+    path('personas/<int:myID>/', personasShowObject, name = 'browsing')
 ]

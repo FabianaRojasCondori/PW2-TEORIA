@@ -19,6 +19,7 @@ class PersonaForm(forms.ModelForm):
         else:
             print('Error: La primera letra en Mayuscula')
             raise forms.ValidationError('La primera letra en Mayuscula')
+       
 
 class RawPersonaForm(forms.Form):
     nombres = forms.CharField(
