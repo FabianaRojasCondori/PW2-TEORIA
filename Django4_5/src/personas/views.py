@@ -8,6 +8,7 @@ from django.views.generic import ListView
 
 class PersonaListView(ListView):
     model = Persona
+    queryset = Persona.objects.filter(edad__lte='20')
 
 def personaAnotherCreateView(request):
     form = RawPersonaForm() #request.GET
