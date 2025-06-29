@@ -13,7 +13,6 @@ class PersonaListView(ListView):
 
 class PersonaDetailView(DetailView):
     model = Persona
-    template_name = "personas/detalle.html"
 
 def personaAnotherCreateView(request):
     form = RawPersonaForm() #request.GET

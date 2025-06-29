@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import (PersonaListView, PersonaDetailView, )
+from .views import (
+    PersonaListView, PersonaDetailView, 
+    )
 
 urlpatterns = [
     path('', PersonaListView.as_view(), name='persona-list'),
