@@ -37,4 +37,3 @@ class RawPersonaForm(forms.Form):
     donador = forms.BooleanField()
 
 
-

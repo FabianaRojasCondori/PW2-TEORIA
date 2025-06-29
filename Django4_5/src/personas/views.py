@@ -4,6 +4,7 @@ from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
 from django.views.generic import ListView
 from django.views.generic import DetailView
+from django.views.generic.edit import CreateView
 
 # Create your views here.
 
@@ -58,3 +59,12 @@ def personasShowObject(request, myID):
         'objeto': obj,
     }
     return render(request, "personas/descripcion.html", context)
+
+class PersonaCreateView(CreateView):
+    model = Persona
+    fields = [
+        'nombres',
+        'apellidos',
+        'edad',
+        'donador'
+    ]
