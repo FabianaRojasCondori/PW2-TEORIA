@@ -4,17 +4,19 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HelloWorld } from './hello-world/hello-world';
 import { User } from './user/user';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HelloWorld, User],
+  imports: [RouterOutlet, CommonModule, HelloWorld, User, FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
     title = 'my-dream-app';
-    name: string;
+    name: string = '';
+    age: number = 40;
     email: string;
     webpage: string;
     hobbies: string[];
@@ -23,7 +25,7 @@ export class AppComponent {
 
     constructor() {
         console.log("Constructor working ... ");
-        this.name = "Fabiana Rojas C.";
+        this.name = "Carlo Jose Luis";
         this.email = "frojascon@unsa.edu.pe";
         this.webpage = "http://www.unsa.edu.pe";
         this.hobbies = ["Voley", "Programación", "Netflix"];
