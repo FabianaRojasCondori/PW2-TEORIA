@@ -2,11 +2,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HelloWorld } from './hello-world/hello-world';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, HelloWorld],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
