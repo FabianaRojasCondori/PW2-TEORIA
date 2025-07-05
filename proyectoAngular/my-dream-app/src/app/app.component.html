@@ -28,16 +28,24 @@
   <h1>{{ title }}</h1>
 </div>
 
-<app-hello-world></app-hello-world>
+<div class="usuarios-superior">
+  <ul>
+    <li *ngFor="let user of users">
+      <app-user [nameUser]="user"></app-user>
+    </li>
+  </ul>
+</div>
 
-<h1>Desde app.component</h1>
-<form (submit)="addUser(newUser)">
-  <input type="text" #newUser />
-  <button>Agregar Usuario</button>
-</form>
-<ul>
-  <li *ngFor="let user of users">
-    {{ user }}
-    <button (click)="deleteUser(user)">Borrar Usuario</button>
-  </li>
-</ul>
+<div class="usuarios-inferior">
+  <h2>Desde app.component</h2>
+  <form (submit)="addUser(newUser)">
+    <input type="text" #newUser />
+    <button>Agregar Usuario</button>
+  </form>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user }}
+      <button (click)="deleteUser(user)">Borrar Usuario</button>
+    </li>
+  </ul>
+</div>
