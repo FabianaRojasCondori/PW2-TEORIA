@@ -30,8 +30,10 @@
 
 <app-hello-world></app-hello-world>
 
+<h1>Desde app.component</h1>
 <ul>
   <li *ngFor="let user of users">
-    <app-user [nameUser]="user"></app-user>
+    {{ user }}
+    <button (click)="deleteUser(user)">Borrar Usuario</button>
   </li>
 </ul>
