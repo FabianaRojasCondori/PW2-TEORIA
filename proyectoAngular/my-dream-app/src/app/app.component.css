@@ -7,3 +7,9 @@
   background-color: #eee;
   color: black;
 }
+
+.component2 {
+    background-color: #a3a0a0;
+    color: red;
+    padding: 20px;
+}
