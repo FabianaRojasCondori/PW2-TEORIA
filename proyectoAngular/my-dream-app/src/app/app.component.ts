@@ -12,20 +12,22 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
     title = 'my-dream-app';
-    name : string;
-    email : string ;
-    webpage : string;
-    hobbies : string[] ;
+    name: string;
+    email: string;
+    webpage: string;
+    hobbies: string[];
+    showHobbies: boolean;
 
     constructor() {
         console.log("Constructor working ... ");
         this.name = "Fabiana Rojas C.";
         this.email = "frojascon@unsa.edu.pe";
         this.webpage = "http://www.unsa.edu.pe";
-        this.hobbies = ["Voley","Programación","Netflix"];
+        this.hobbies = ["Voley", "Programación", "Netflix"];
+        this.showHobbies = false;
     }
 
-    showhobbies () {
-        return true;
+    toggleHobbies() {
+        this.showHobbies = !this.showHobbies;
     }
 }
