@@ -1,4 +1,4 @@
-
+ 
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -30,4 +30,10 @@ export class AppComponent {
     toggleHobbies() {
         this.showHobbies = !this.showHobbies;
     }
+
+    newHobby(hobby: any) {
+    this.hobbies.push(hobby.value);
+    hobby.value = "";
+    return false;
+  }
 }

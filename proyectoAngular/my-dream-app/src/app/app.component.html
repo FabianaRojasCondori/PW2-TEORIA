@@ -10,11 +10,15 @@
 
 
   <button (click)="toggleHobbies()" class="btn">Mostrar Hobbies</button>
+
   <div *ngIf="showHobbies" class="component2">
     <h3>Hobbies:</h3>
     <ul>
       <li *ngFor="let hobby of hobbies">{{ hobby }}</li>
     </ul>
+    <form (submit)="newHobby(hobby)">
+      <input #hobby type="text" placeholder="hobby" />
+    </form>
   </div>
 
   <a href="{{ webpage }}" target="_blank">Visita mi sitio Web</a>
