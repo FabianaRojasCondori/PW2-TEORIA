@@ -9,4 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class User {
   @Input() nameUser: any;
+
+  sayHello(nameUser: any) {
+    alert("Hola " + nameUser);
+  }
 }
