@@ -1,5 +1,6 @@
  
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HelloWorld } from './hello-world/hello-world';
@@ -22,14 +23,20 @@ export class AppComponent {
     hobbies: string[];
     showHobbies: boolean;
     users: string[] = ['ryan', 'joe', 'cameron', 'john'];
+    posts: any[] = [];
 
-    constructor() {
+    constructor(private dataService: DataService) {
         console.log("Constructor working ... ");
         this.name = "Carlo Jose Luis";
         this.email = "frojascon@unsa.edu.pe";
         this.webpage = "http://www.unsa.edu.pe";
         this.hobbies = ["Voley", "Programación", "Netflix"];
         this.showHobbies = false;
+
+        this.dataService.getData().subscribe(data => {
+            console.log(data);
+            this.posts = data;
+        });
     }
 
     toggleHobbies() {
