@@ -55,6 +55,13 @@
     <input type="text" name="name" [(ngModel)]="name" />
     <input type="text" name="age" [(ngModel)]="age" />
   </form>
-  <h2>Name: {{ name }}</h2>
-  <h2>Age: {{ age }}</h2>
+  <h2>Nombre: {{ name }}</h2>
+  <h2>Edad: {{ age }}</h2>
+</div>
+
+<div class="ash">
+  <div *ngFor="let post of posts">
+    <h2>{{ post.title }}</h2>
+    <h3>{{ post.body }}</h3>
+  </div>
 </div>
