@@ -10,7 +10,13 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HelloWorld, User, FormsModule],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    HelloWorld,
+    User,
+    FormsModule
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
